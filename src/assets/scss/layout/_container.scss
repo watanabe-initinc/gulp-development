@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.l-site-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+
+  @include mq-up() {
+    color: yellow;
+  }
+}

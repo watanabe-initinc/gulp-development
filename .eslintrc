@@ -1,0 +1,27 @@
+{
+  "extends": ["eslint:recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jquery": true
+  },
+  "rules": {
+    // console メソッドを許可
+    "no-console": 0,
+    // alert メソッドを許可
+    "no-alert": 0,
+    // 正規表現におけるスペースの利用を許可
+    "no-regex-spaces": 0,
+    // 連続スペースの許可
+    "no-multi-spaces": 0,
+    // ドット記法以外（ブランケット記法）を許可
+    "dot-notation": 0,
+    // strict 強制を緩和
+    "strict": 0
+  }
+}

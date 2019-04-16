@@ -1,0 +1,23 @@
+module.exports = {
+  gulp: require('gulp'),
+  plumber: require('gulp-plumber'),
+  notify: require('gulp-notify'),
+  watch: require('gulp-watch'),
+  cached: require('gulp-cached'),
+  cache_bust: require('gulp-cache-bust'),
+  rename: require('gulp-rename'),
+  htmlHint: require('gulp-htmlhint'),
+  ejs: require('gulp-ejs'),
+  fs: require('fs'),
+  sass: require('gulp-sass'),
+  cleanCss: require('gulp-clean-css'),
+  prefixer: require('gulp-autoprefixer'),
+  csscomb: require('gulp-csscomb'),
+  sourcemaps: require('gulp-sourcemaps'),
+  image_min: require('gulp-imagemin'),
+  browser_sync: require('browser-sync').create(),
+  webpack: require('webpack'),
+  webpack_stream: require('webpack-stream'),
+  webpack_config_development: require('./webpack.config.dev.js'),
+  webpack_config_production: require('./webpack.config.prod.js')
+};

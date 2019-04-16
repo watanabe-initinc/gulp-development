@@ -1,0 +1,12 @@
+// リンク要素用の変数群
+
+// Links
+//
+// アンカータグ共通の色（通常／ホバー）
+// サイトに応じて変更することを許可する
+
+$link-hover-darken-percentage: 15% !default;
+$link-color: $primary !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, $link-hover-darken-percentage) !default;
+$link-hover-decoration: underline !default;
