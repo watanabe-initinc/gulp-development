@@ -19,8 +19,16 @@ export const clean = {
 export const copy = {
   name: 'copy',
   src: BASE.SRC,
-  input: [BASE.SRC, '**', '*.{pdf,xls,xlsx}'].join('/'),
-  reject: `!${[BASE.SRC, '**', '*.{sass,scss,ejs,jsx,html,js,es6,jpg,gif,png,svg}'].join( '/' )}`,
+  input: [
+    BASE.SRC,
+    '**',
+    '*.{pdf,xls,xlsx,css,ico,svg,eot,ttf,woff,woff2}'
+  ].join('/'),
+  reject: `!${[
+    BASE.SRC,
+    '**',
+    '*.{sass,scss,ejs,jsx,html,js,es6,jpg,gif,png}'
+  ].join('/')}`,
   dest: BASE.DEST,
   build: BASE.BUILD
 };
@@ -28,9 +36,9 @@ export const copy = {
 export const image_min = {
   name: 'image_min',
   src: BASE.SRC,
-  input: [BASE.SRC, BASE.ASSETS, '**', '*.{jpg,gif,png,svg}'].join('/'),
-  dest: [BASE.DEST, BASE.ASSETS].join('/'),
-  build: [BASE.BUILD, BASE.ASSETS].join('/')
+  input: [BASE.SRC, '**', '*.{jpg,gif,png}'].join('/'),
+  dest: BASE.DEST,
+  build: BASE.BUILD
 };
 
 export const ejs = {
@@ -38,12 +46,12 @@ export const ejs = {
   src: BASE.SRC,
   metadata: [BASE.SRC, '_data/', 'meta.json'].join('/'),
   input: [BASE.SRC, '**', '*.{html,ejs}'].join('/'),
-  reject: `!${[BASE.SRC, '**', '_*.ejs'].join( '/' )}`,
+  reject: `!${[BASE.SRC, '**', '_*.ejs'].join('/')}`,
   dest: BASE.DEST,
   build: BASE.BUILD,
   opt: {
     plumber: {
-      message: "Error: HTML syntax error \n <%= error.message %>",
+      message: 'Error: HTML syntax error \n <%= error.message %>',
       icon: './.icon/notify-icon.png'
     },
     htmlHint: {
@@ -61,7 +69,7 @@ export const ejs = {
       'space-tab-mixed-disabled': 'space'
     },
     extension: {
-      'ext': '.html'
+      ext: '.html'
     }
   }
 };
@@ -69,12 +77,11 @@ export const ejs = {
 export const browser_sync = {
   ghostMode: false,
   notify: false,
-  domain: '0.0.0.0',
-  port: 6500,
+  domain: '127.0.0.1',
+  port: 6504,
   ui: {
-    port: 6501
+    port: 6505
   },
-  browser: 'Google Chrome',
   server: {
     baseDir: BASE.DEST
   }
@@ -84,16 +91,16 @@ export const sass = {
   name: 'sass',
   root: BASE.ROOT,
   src: BASE.SRC,
-  input: [BASE.SRC, BASE.ASSETS, 'scss', '**', '*.{sass,scss}'].join('/'),
-  reject: `!${[BASE.SRC, BASE.ASSETS, 'scss', '**', '_*.{sass,scss}'].join( '/' )}`,
-  dest: [BASE.DEST, BASE.ASSETS, 'css'].join('/'),
-  build: [BASE.BUILD, BASE.ASSETS, 'css'].join('/'),
+  input: [BASE.SRC, '**', 'scss', '**', '*.{sass,scss}'].join('/'),
+  reject: `!${[BASE.SRC, '**', 'scss', '**', '_*.{sass,scss}'].join('/')}`,
+  dest: BASE.DEST,
+  build: BASE.BUILD,
   opt: {
     plumber: {
-      message: "Error: SASS syntax error \n <%= error.message %>",
+      message: 'Error: SASS syntax error \n <%= error.message %>',
       icon: './gulp/.icon/notify-icon.png'
     },
-    output: 'comp',
+    output: 'expanded',
     prefixer: {
       browsers: ['last 2 versions'],
       cascade: false
@@ -116,12 +123,12 @@ export const webpack = {
   name: 'webpack',
   root: BASE.ROOT,
   src: BASE.SRC,
-  input: [BASE.SRC, BASE.ASSETS, 'js', '**', '*.{es6,js}'].join('/'),
-  dest: [BASE.DEST, BASE.ASSETS, 'js'].join('/'),
-  build: [BASE.BUILD, BASE.ASSETS, 'js'].join('/'),
+  input: [BASE.SRC, '**', 'js', '**', '*.{es6,js}'].join('/'),
+  dest: BASE.DEST,
+  build: BASE.BUILD,
   opt: {
     plumber: {
-      message: "Error: Javascript error \n <%= error.message %>",
+      message: 'Error: Javascript error \n <%= error.message %>',
       icon: './.icon/notify-icon.png'
     }
   }

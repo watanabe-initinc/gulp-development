@@ -2,45 +2,23 @@
 // import
 // **********************************************
 
-import {
-  series,
-  parallel,
-  task,
-  watch
-} from 'gulp';
+import { series, parallel, task, watch } from 'gulp';
 
-import {
-  ejs
-} from './gulp/tasks/ejs';
-import {
-  sass
-} from './gulp/tasks/sass';
-import {
-  webpack
-} from './gulp/tasks/webpack';
-import {
-  copy
-} from './gulp/tasks/copy';
-import {
-  clean
-} from './gulp/tasks/clean';
-import {
-  image_min
-} from './gulp/tasks/image_min';
-import {
-  cache_bust
-} from './gulp/tasks/cache';
-import {
-  browser_sync,
-  bs_reload
-} from './gulp/tasks/browser_sync';
+import { ejs } from './gulp/tasks/ejs';
+import { sass } from './gulp/tasks/sass';
+import { webpack } from './gulp/tasks/webpack';
+import { copy } from './gulp/tasks/copy';
+import { clean } from './gulp/tasks/clean';
+import { image_min } from './gulp/tasks/image_min';
+import { cache_bust } from './gulp/tasks/cache';
+import { browser_sync, bs_reload } from './gulp/tasks/browser_sync';
 
 import {
   copy as copyConfig,
   ejs as ejsConfig,
   sass as sassConfig,
   webpack as webpackConfig,
-  image_min as imgminConfig,
+  image_min as imgminConfig
   // cache as cacheConfig
 } from './gulp/config';
 
@@ -69,16 +47,15 @@ function watchFiles() {
   // watch(cacheConfig.input, series(cache_bust, bs_reload));
 }
 
-task('dev', series(
-  clean,
-  parallel(ejs, sass, webpack, image_min),
-  copy,
-  browser_sync,
-  watchFiles
-));
+task(
+  'dev',
+  series(
+    clean,
+    parallel(ejs, sass, webpack, image_min),
+    copy,
+    browser_sync,
+    watchFiles
+  )
+);
 
-task('build', series(
-  clean,
-  parallel(ejs, sass, webpack, image_min),
-  copy
-));
+task('build', series(clean, parallel(ejs, sass, webpack, image_min), copy));
