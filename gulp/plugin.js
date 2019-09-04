@@ -13,7 +13,6 @@ module.exports = {
   fs: require('fs'),
   sass: require('gulp-sass'),
   cleanCss: require('gulp-clean-css'),
-  prefixer: require('gulp-autoprefixer'),
   csscomb: require('gulp-csscomb'),
   sourcemaps: require('gulp-sourcemaps'),
   image_min: require('gulp-imagemin'),

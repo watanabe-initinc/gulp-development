@@ -67,9 +67,6 @@ export const ejs = {
       'title-require': true,
       'doctype-html5': true,
       'space-tab-mixed-disabled': 'space'
-    },
-    extension: {
-      ext: '.html'
     }
   }
 };

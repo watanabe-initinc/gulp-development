@@ -26,14 +26,11 @@ export function ejs() {
       })
     )
     .pipe(
-      $.ejs(
-        {
-          json: json
-        },
-        {},
-        ejsConfig.opt.extension
-      )
+      $.ejs({
+        json: json
+      })
     )
+    .pipe($.rename({ extname: '.html' }))
     .pipe(
       $.replace(/\.(js|css|gif|jpg|jpeg|png|svg)\?rev/g, '.$1?rev=' + revision)
     )

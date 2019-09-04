@@ -29,7 +29,6 @@ export function sass() {
           path.dirname = path.dirname.replace('scss', 'css');
         })
       )
-      .pipe($.prefixer(sassConfig.opt.prefixer))
       .pipe($.gulp.dest(outputDir));
   } else {
     return $.gulp
@@ -48,7 +47,6 @@ export function sass() {
           path.dirname = path.dirname.replace('scss', 'css');
         })
       )
-      .pipe($.prefixer(sassConfig.opt.prefixer))
       .pipe($.sourcemaps.write(sassConfig.root))
       .pipe($.gulp.dest(outputDir));
   }
