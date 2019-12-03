@@ -3,7 +3,7 @@ https://github.com/simonwhitaker/gibo
 ### https://raw.github.com/github/gitignore//Node.gitignore
 
 # Local Files
-dest/**/*
+dist/**/*
 build/**/*
 .DS_Store
 
@@ -100,5 +100,3 @@ typings/
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-
-

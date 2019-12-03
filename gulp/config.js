@@ -1,7 +1,7 @@
 const BASE = {
   ROOT: './',
   SRC: './src',
-  DEST: './dest',
+  DEST: './dist',
   BUILD: './build',
   ASSETS: 'assets',
   TASKS: './tasks'
