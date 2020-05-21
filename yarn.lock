@@ -5456,11 +5456,6 @@ isarray@2.0.1:
   resolved "https://registry.yarnpkg.com/isarray/-/isarray-2.0.1.tgz#a37d94ed9cda2d59865c9f76fe596ee1f338741e"
   integrity sha1-o32U7ZzaLVmGXJ92/llu4fM4dB4=
 
-iscroll@^5.2.0:
-  version "5.2.0"
-  resolved "https://registry.yarnpkg.com/iscroll/-/iscroll-5.2.0.tgz#d513307088b5b25a4f893af474804468481829c8"
-  integrity sha1-1RMwcIi1slpPiTr0dIBEaEgYKcg=
-
 isexe@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/isexe/-/isexe-2.0.0.tgz#e8fbf374dc556ff8947a10dcb0572d633f2cfa10"
@@ -5499,11 +5494,6 @@ isurl@^1.0.0-alpha5:
   dependencies:
     has-to-string-tag-x "^1.2.0"
     is-object "^1.0.1"
-
-jquery-drawer@^3.2.2:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/jquery-drawer/-/jquery-drawer-3.2.2.tgz#2919b87232b91e7b5915a6b70da12e399ef032cb"
-  integrity sha1-KRm4cjK5HntZFaa3DaEuOZ7wMss=
 
 jquery@^3.5.0:
   version "3.5.0"
@@ -6260,7 +6250,7 @@ minimatch@0.2.12:
     lru-cache "2"
     sigmund "~1.0.0"
 
-minimatch@3.0.4, minimatch@^3.0.2, minimatch@^3.0.4, minimatch@~3.0.2:
+minimatch@^3.0.2, minimatch@^3.0.4, minimatch@~3.0.2:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-3.0.4.tgz#5166e286457f03306064be5497e8dbb0c3d32083"
   integrity sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
