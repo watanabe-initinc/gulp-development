@@ -17,7 +17,8 @@ export function image_min() {
       $.image_min.gifsicle({
         interlaced: true
       }),
-      $.image_min.jpegtran({
+      $.image_min.mozjpeg({
+        quality: 75,
         progressive: true
       }),
       $.image_min.optipng({
